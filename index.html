@@ -28,5 +28,18 @@
     </main>
 
     <script src="scripts.js"></script>
+    <script>
+    // In-App Interstitial
+    show_11014653({
+      type: 'inApp',
+      inAppSettings: {
+        frequency: 2,
+        capping: 0.1,
+        interval: 30,
+        timeout: 5,
+        everyPage: false
+      }
+    });
+  </script>
   </body>
 </html>
