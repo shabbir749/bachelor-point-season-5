@@ -1,0 +1,16 @@
+:root{--bg:#f7f8fb;--card:#ffffff;--accent:#0088cc;--muted:#666}
+*{box-sizing:border-box}body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;margin:0;background:var(--bg);color:#111}
+.site-header{background:linear-gradient(90deg,rgba(0,136,204,0.06),transparent);padding:12px 18px;border-bottom:1px solid rgba(0,0,0,0.04)}
+.brand{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:12px}
+#site-title{font-size:18px;margin:0;color:var(--accent)}
+.telegram{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+.telegram svg{display:block}
+.tg-id{font-size:14px;color:var(--muted)}
+.videos{max-width:1000px;margin:18px auto;padding:0 12px;display:flex;flex-direction:column;gap:18px}
+.video-card{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 1px 3px rgba(16,24,40,0.05)}
+.video-meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px;gap:12px}
+.video-title{font-weight:600;margin:0}
+.video-serial{color:var(--muted);font-size:13px}
+.video-footer{margin-top:8px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:12px}
+iframe,video{width:100%;height:360px;border-radius:6px;border:0;background:#000}
+@media (max-width:640px){iframe,video{height:210px}}
