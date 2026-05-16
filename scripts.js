@@ -2,12 +2,14 @@ fetch("videos.json")
   .then(response => response.json())
   .then(videos => {
 
+    console.log(videos);
+
     const container = document.getElementById("video-container");
 
     videos.forEach(video => {
 
-      container.innerHTML += `
-        <div class="video-box">
+      const iframe = `
+        <div style="margin-bottom:30px;">
 
           <h2>${video.title}</h2>
 
@@ -15,15 +17,16 @@ fetch("videos.json")
             src="${video.url}"
             width="100%"
             height="500"
-            frameborder="0"
             allowfullscreen>
           </iframe>
 
         </div>
       `;
+
+      container.innerHTML += iframe;
     });
 
   })
   .catch(error => {
-    console.log("Error loading videos:", error);
+    console.log("Failed to load videos:", error);
   });
